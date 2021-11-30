@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
-
 from oscar.defaults import *
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
@@ -36,7 +35,6 @@ SECRET_KEY = 'v%$gbp74z^e8lbssc_pa^dn#=5b_gfx+^gcir9f(1!tx@lsxxx'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -117,6 +115,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -300,3 +299,6 @@ SOCIAL_AUTH_FACEBOOK_SECRET ='3eac511637a618bd873adbc558175c7a' #app key
 
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_USERNAME_REQURIED=True
+
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
