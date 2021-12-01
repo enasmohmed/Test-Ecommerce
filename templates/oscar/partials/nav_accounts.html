@@ -15,7 +15,7 @@
           <div class="input-group">
               {{ search_form.q }}
               <button class="btn btn-default"
-                      style="position: absolute;top: -1px;float: left;font-size: 22px;background: none;">
+                      style="position: absolute;top: -1px;float: left;font-size: 22px;background: none;left: 84%;">
                   <i class="fa fa-search"></i>
               </button>
           </div>
@@ -63,6 +63,24 @@
     {% endif %}
 
   </ul>
+  <div class="top-links">
+    <div class="language-box">
+         {% get_current_language as LANGUAGE_CODE %}
+          {% get_available_languages as LANGUAGES %}
+          {% get_language_info_list for LANGUAGES as languages %}
+          <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ redirect_to }}" />
+                {% for language in languages %}
+                    {% if language.code != LANGUAGE_CODE %}
+                        <button type="submit" name="language" value="{{ language.code }}" class="selectpicker" data-width="fit">
+                          <p><i class="fa fa-language"></i> {{ language.name }}</p>
+                        </button>
+                    {% endif %}
+                {% endfor %}
+          </form>
+    </div>
+  </div>
 </div>
 
 

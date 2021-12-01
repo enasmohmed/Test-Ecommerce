@@ -68,7 +68,7 @@
 @import url(../css/pretty-checkbox.min.css);/* Pretty Checkbox  */
 @import url(../css/fancybox.css);/* Fancybox */
 @import url(../css/blog.css);/* Blog */
-@import url(../css/jtv-mob-menu.css);/* JTV Mob Menu */
+@import url(../css/jtv-mob-menu-rtl.css);/* JTV Mob Menu */
 /******************************************
 2. Newsletter Popup
 ******************************************/
@@ -793,21 +793,21 @@ small {
 }
 .language-box button:focus, .language-box button, .currency-box select:focus, .currency-box select {
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background: #33465c;
-	background-position: right center;
-	/* background-image: url(../img/images/select-arrow.png); */
-	background-repeat: no-repeat;
-	position: right 10px center;
-	color: transparent;
-	padding-right: 12%;
+    -moz-appearance: none;
+    appearance: none;
+    background: #33465c;
+    background-position: right center;
+    /* background-image: url(../img/images/select-arrow.png); */
+    background-repeat: no-repeat;
+    position: right 10px center;
+    color: transparent;
+   padding-right: 12%;
 	text-indent: 88%;
 	text-overflow: '';
 	cursor: pointer;
 	color: #fff;
-    float: right;
-    margin-right: -12%;
+	float: right;
+	margin-right: -12%;
 }
 /* End language & currency*/
 
@@ -1119,6 +1119,7 @@ background:#f6f6f6
 	padding-right: 6px;
 	font-weight: normal;
 }
+
 /******************************************
 6. Navigation
 ******************************************/
@@ -3703,11 +3704,11 @@ a.blog-preview_btn:focus, a.blog-preview_btn:hover {
 
 @media (max-width: 768px) {
 	.logo-img {
-        width: 39%;
+        width: 53%;
         text-align: center;
         margin-left: -13%;
         margin-right: 0;
-        margin-top: -12%;
+        margin-top: 0%;
     }
 }
 
@@ -9201,7 +9202,7 @@ footer .coppyright {
 	text-align: center;
 }
 .payment-accept img {
-	margin-right: 6px;
+	margin-right: 4px;
 }
 .header-banner.mobile-show .our-features-box {
 	display: block !important;
