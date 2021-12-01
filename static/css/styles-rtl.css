@@ -809,6 +809,14 @@ small {
 	float: right;
 	margin-right: -12%;
 }
+
+@media (max-width: 768px) {
+	.language-box button:focus, .language-box button, .currency-box select:focus, .currency-box select{
+		padding-right: 41%;
+		margin-right: 6%;
+		margin-top: 5%;
+    }
+}
 /* End language & currency*/
 
 .top_section {
@@ -941,6 +949,12 @@ small {
     border: 1px #eaab00 solid;
     background: #eaab00;
 	right: 25% !important;
+}
+
+@media (max-width: 768px) {
+	.top-cart-contain{
+		right: 0% !important;
+    }
 }
 .top-cart-title p {
 	margin: 0;
@@ -3704,11 +3718,12 @@ a.blog-preview_btn:focus, a.blog-preview_btn:hover {
 
 @media (max-width: 768px) {
 	.logo-img {
-        width: 53%;
-        text-align: center;
-        margin-left: -13%;
-        margin-right: 0;
-        margin-top: 0%;
+		width: 53%;
+		text-align: center;
+		margin-left: -13%;
+		margin-right: 0;
+		margin-top: -8%;
+		margin-bottom: -9%;
     }
 }
 

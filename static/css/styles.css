@@ -785,7 +785,14 @@ small {
 	color: #fff;
 	float: left;
 	margin-left: 15px;
-	/*margin-top: 5%;*/
+}
+
+@media (max-width: 768px) {
+	.language-box button:focus, .language-box button, .currency-box select:focus, .currency-box select{
+		padding-right: 42%;
+		margin-left: 15px;
+		margin-top: 5%;
+    }
 }
 /* End language & currency*/
 
@@ -3650,10 +3657,10 @@ a.blog-preview_btn:focus, a.blog-preview_btn:hover {
 }
 
 .logo-img{
-    /* width: 72%;
-    margin-top: -27%;
-    margin-bottom: -31%;
-    margin-left: 8%; */
+    width: 76%;
+    margin-top: -13%;
+    margin-bottom: -16%;
+    margin-left: 10%;
 }
 
 @media (max-width: 576px) {
@@ -3668,11 +3675,11 @@ a.blog-preview_btn:focus, a.blog-preview_btn:hover {
 
 @media (max-width: 768px) {
 	.logo-img {
-        width: 39%;
-        text-align: center;
-        margin-left: -13%;
-        margin-right: 0;
-        margin-top: 0%;
+	    width: 54%;
+	    text-align: center;
+	    margin-left: -13%;
+	    margin-right: 0;
+	    margin-top: -11%;
     }
 }
 
@@ -7655,10 +7662,9 @@ footer .links li a:before {
 	color: #fff
 }
 .footer-img{
-    /* width: 60%; */
-    margin-top: 20%;
-    /* position: relative;
-    right: 13%; */
+    width: 78%;
+    margin-top: 6%;
+    margin-bottom: -9%;
 }
 footer p {
 	font-size: 13px;
