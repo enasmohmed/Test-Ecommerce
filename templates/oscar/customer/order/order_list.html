@@ -74,4 +74,65 @@
         {% endif %}
     {% endif %}
 
+    <hr>
+
+
+    <div>
+        <h2>{% trans 'Track Order' %}</h2>
+
+            <section class="main-container col1-layout">
+              <div class="main container">
+                <div id="order-tracking">
+
+                  <div class="order-tracking-details">
+                    <p>You can track the status of your order 24 hours after it is placed.</p>
+
+                    <p>If you cannot find your order number or for status of an international order, please contact us at chat live</p>
+
+                  </div>
+                 {% for order in orders %}
+                  <ol class="progtrckr text-center" data-progtrckr-steps="5">
+                      <span class="badge badge-info order_number">Order Number: {{order.number}}</span>
+                    {% if order.order_status == 'Order Placed' %}
+                        <li class="progtrckr-done">{{order.order_status}}</li>
+                        <li class="progtrckr-todo">Order Processing</li>
+                        <li class="progtrckr-todo">Shipped</li>
+                        <li class="progtrckr-todo">Delivered</li>
+
+                    {% elif order.order_status == 'Order Processing'%}
+                      <li class="progtrckr-done">Order Placed</li>
+                      <li class="progtrckr-done">{{order.order_status}}</li>
+                      <li class="progtrckr-todo">Shipped</li>
+                      <li class="progtrckr-todo">Delivered</li>
+
+                    {% elif order.order_status == 'Shipped'%}
+                        <li class="progtrckr-done">Order Placed</li>
+                        <li class="progtrckr-done">Order Processing</li>
+                        <li class="progtrckr-done">{{order.order_status}}</li>
+                        <li class="progtrckr-todo">Delivered</li>
+
+                    {% elif order.order_status == 'Delivered'%}
+                        <li class="progtrckr-done">Order Placed</li>
+                        <li class="progtrckr-done">Order Processing</li>
+                        <li class="progtrckr-done">Shipped</li>
+                        <li class="progtrckr-done">{{order.order_status}}</li>
+                    {% else %}
+                        <li class="progtrckr-todo">Order Placed</li>
+                        <li class="progtrckr-todo">Order Processing</li>
+                        <li class="progtrckr-todo">Shipped</li>
+                        <li class="progtrckr-todo">Delivered</li>
+                    {% endif %}
+
+                  </ol>
+                 {% endfor %}
+
+                  
+                </div>
+
+
+              </div>
+            </section>
+
+    </div>
+
 {% endblock tabcontent %}

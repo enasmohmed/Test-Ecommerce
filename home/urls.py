@@ -19,15 +19,15 @@ from django.contrib import admin
 from django.urls import path
 
 from . import views
+from .views import HowToPay
 
-
-# from SRC.Oscar import views
 app_name ="home"
 
 
 urlpatterns = [
 
     path('', views.home, name="index"),
+    path('how-to-pay/', HowToPay.as_view(), name='how-to-pay'),
     path('send/', views.send_email, name="send"),
     path('print/', views.print_page, name="print"),
 ]

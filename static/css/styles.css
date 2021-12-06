@@ -8951,6 +8951,14 @@ button.button span span {
 	text-align: center;
 	text-transform: uppercase;
 }
+
+#order-tracking .progtrckr .order_number{
+    background-color: #17a2b8;
+    padding: 12px 17px;
+    margin-top: 5%;
+    border-color: #17a2b8;
+    font-size: 15px;
+}
 #order-tracking p {
 	color: #333;
 	font-size: 15px;
@@ -12283,6 +12291,19 @@ input[type='radio']:hover{
     font-size: 14px;
 }
 
+.title-pay{
+	text-align: center;
+	color: #db9512;
+}
+
+.section_payment{
+	text-align: center;
+	margin-bottom: 5%;
+}
+.payment-button{
+	background-color: #db9512;
+	color: #fff;
+}
 .way_a_pay{
 	line-height: 2;
     margin-right: 20px;
@@ -12305,4 +12326,108 @@ input[type='radio']:hover{
 }
 .section_two p span{
 	color: #db9512;
+}
+
+
+
+/********************************************
+  Tracking Order
+ ********************************************/
+.col1-layout{
+	min-height: 0px;
+}
+#order-tracking {
+	width: 100%;
+	padding: 20px 25px 5px 25px;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 30px;
+}
+#order-tracking h2 {
+	color: #000;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 4px;
+	padding-bottom: 0px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#order-tracking p {
+	color: #333;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 5px;
+	padding: 0px 15%;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+ol.progtrckr {
+	margin: 20px 0px 35px;
+	padding: 0;
+	list-style-type: none;
+	font-size: 15px;
+}
+ol.progtrckr li {
+	display: inline-block;
+	text-align: center;
+	line-height: 3.5em;
+}
+ol.progtrckr[data-progtrckr-steps="2"] li {
+	width: 49%;
+}
+ol.progtrckr[data-progtrckr-steps="3"] li {
+	width: 33%;
+}
+ol.progtrckr[data-progtrckr-steps="4"] li {
+	width: 24%;
+}
+ol.progtrckr[data-progtrckr-steps="5"] li {
+	width: 19%;
+}
+ol.progtrckr[data-progtrckr-steps="6"] li {
+	width: 16%;
+}
+ol.progtrckr[data-progtrckr-steps="7"] li {
+	width: 14%;
+}
+ol.progtrckr[data-progtrckr-steps="8"] li {
+	width: 12%;
+}
+ol.progtrckr[data-progtrckr-steps="9"] li {
+	width: 11%;
+}
+ol.progtrckr li.progtrckr-done {
+	color: black;
+	border-bottom: 4px solid yellowgreen;
+}
+ol.progtrckr li.progtrckr-todo {
+	color: silver;
+	border-bottom: 4px solid silver;
+}
+ol.progtrckr li:after {
+	content: "\00a0\00a0";
+}
+ol.progtrckr li:before {
+	position: relative;
+	bottom: -2.5em;
+	float: left;
+	left: 50%;
+	line-height: 1em;
+}
+ol.progtrckr li.progtrckr-done:before {
+	content: "\2713";
+	color: white;
+	background-color: yellowgreen;
+	height: 2.2em;
+	width: 2.2em;
+	line-height: 2.2em;
+	border: none;
+	border-radius: 2.2em;
+}
+ol.progtrckr li.progtrckr-todo:before {
+	content: "\039F";
+	color: silver;
+	background-color: white;
+	font-size: 2.2em;
+	bottom: -1.09em;
 }

@@ -25,7 +25,6 @@ class CheckoutConfig(OscarConfig):
         self.shipping_method_view = get_class('checkout.views', 'ShippingMethodView')
         self.payment_method_view = get_class('checkout.views', 'PaymentMethodView')
         self.payment_details_view = get_class('checkout.views', 'PaymentDetailsView')
-        self.how_to_pay_view = get_class('checkout.views', 'HowToPay')
         self.thankyou_view = get_class('checkout.views', 'ThankYouView')
 
     def get_urls(self):
@@ -52,10 +51,6 @@ class CheckoutConfig(OscarConfig):
             url(r'payment-details/$',
                 self.payment_details_view.as_view(), name='payment-details'),
             
-            # How To Pay 
-            url(r'how-to-pay/$',
-                self.how_to_pay_view.as_view(), name='how-to-pay'),
-
             # Preview and thankyou
             url(r'preview/$',
                 self.payment_details_view.as_view(preview=True),

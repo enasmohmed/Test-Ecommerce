@@ -366,18 +366,6 @@ class PaymentMethodView(CheckoutSessionMixin, generic.TemplateView):
 
 
 
-
-# =================
-# How To Pay 
-# =================
-
-class HowToPay(generic.ListView):
-    model= Order
-    template_name = 'oscar/checkout/how_to_pay.html'
-
-
-
-
 # ================
 # Order submission
 # ================
